@@ -69,13 +69,13 @@ var swiper = new Swiper('.swiper2 .swiper-container', {
     prevEl: '.swiper-button-prev',
   },
   slidesPerView: 2,
-  spaceBetween: 0,
+  spaceBetween: 40,
   initialSlide: 1,
   loop: true,
   autoplay: {
-    delay: 3000,
-    disableOnInteraction: true
-  },
+  delay: 3000,
+  disableOnInteraction: true,
+  }
 });
 
 $(function(){
