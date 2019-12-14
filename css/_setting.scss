@@ -1,0 +1,304 @@
+// インナー幅
+$layout-width-inner: 1086px;
+
+@mixin article-info-group-ul2 {
+    background: white;
+    margin: 0;
+    padding: 0 5px;
+    &--item {
+        position: relative;
+        color: #005E3C;
+        padding: 15px 0 15px 20px;
+        border-bottom: solid 1px #CCCCCC;
+        font-size: 1.4rem;
+        &:after {
+            @include after-Caret;
+            color: $main-color;
+        }
+        &:hover {
+            background: white;
+            text-decoration: underline;
+            transition: all 0.2s linear;
+        }
+    }
+}
+
+@mixin after-Caret {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0da";/*アイコンのユニコード*/
+    position: absolute;/*絶対位置*/
+    font-size: 0.7em;/*サイズ*/
+    font-weight: 900;
+    top: 50%;/*アイコンの位置*/
+    right: 10px;
+    -ms-transform: translate(0,-50%);
+    -webkit-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    color: rgb(142, 209, 116);
+}
+
+@mixin common-btn {
+    background: $main-color;
+    color: white;
+}
+@mixin article-info-group {
+    background: #EFF4ED;
+    width: 90vw;
+    margin: 0 auto 10px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    border: 1px solid #CCCCCC;
+    &--h4 {
+        color: $main-color;
+        border-left: 5px solid $main-color;
+        padding: 5px 15px;
+    }
+}
+@mixin article-info-group-ul {
+    &--ul {
+        margin: 10px 15px 0;
+        &--item {
+            position: relative;
+            padding: 10px 0 10px 10px;
+            border-bottom: dotted 1px #CCCCCC;
+            color: #666666;
+            &:after {
+                @include after-Caret;
+            }
+            &:hover {
+                background: rgb(216, 221, 213);
+                transition: all 0.2s linear;
+            }
+        }
+    }
+}
+
+@mixin common {  
+    display: block;
+    position: relative;
+    @include p-top(67px);
+    @include height(77px);
+    @include line-height(77px);
+    @include font-size(60px);
+    font-weight: bold;
+    @include mq('sp') {
+        padding-top: 38.181px;
+    }
+    margin: 0 auto;
+    text-align: center;
+    &:before {
+        position: absolute;
+        content: '';
+        left: 50%;
+        display: inline-block;
+        @include width(76px);
+        @include height(5px);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);/*位置調整*/
+        background-color: $main-color;/*線の色*/
+    }
+}
+
+
+@mixin li-common {
+    @include center-flex;
+    justify-content: flex-start;
+    height: 60px;
+    width: 100%;
+    border-bottom: dotted 1px $main-color;
+    padding-left: 10px;
+    &::after {
+        position: absolute;
+        right: 5px;
+        content: "\f0da";
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900;
+        font-size: 30px;
+    }
+    &:hover {
+        transition: all 0.2s linear;
+        &::before {
+            position: absolute;
+            right: 5px;
+            content: "\f0da";
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900;
+            font-size: 30px;
+            color: green;
+            z-index: 2;
+        }
+    }
+}
+@mixin form {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 0;
+    font-family: inherit;
+    box-sizing: border-box;
+    // font-size,height,padding,width指定必要
+    &:focus {
+        border: 1px solid $main-color;
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+@mixin form-more {
+    position: relative;
+    .text {
+        @include form;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        -ms-transform: translate(0,-50%);
+        -webkit-transform: translate(0,-50%);
+        transform: translate(0,-50%);
+        background-color: transparent;   
+        color: inherit;  
+    }
+}
+
+
+
+// ブレークポイント
+$breakpoints: (
+    "min": "screen and (max-width: 320px)",
+     "sp": "screen and (max-width: 767px)",
+    "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
+     "pc": "screen and (min-width: #{$layout-width-inner})",
+    "max": "screen and (min-width: 1366px)",
+);
+// PC → インナーの幅まで
+// タブレット → インナーの幅からiPad（768px）まで
+// スマホ → iPadより小さい（767px）からiPhone SE（320px）まで
+
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+
+    @media #{map-get($breakpoints,$breakpoint)} {
+  
+      @content;
+    }
+  }
+
+// メインカラー
+$main-color:#005E3C;
+
+@mixin width($width) {
+    max-width: $width;
+    width: $width / 1366px * 100vw ;
+    min-width: $width / 1366px * 500px;
+}
+@mixin height($height) {
+    max-height: $height;
+    height: $height / 1366px * 100vw;
+    min-height: $height / 1366px * 500px;
+}
+@mixin line-height($line-height) {
+    @include mq('max') {
+        line-height: $line-height;
+    }
+    line-height: $line-height / 1366px *  100vw;
+    @include mq('sp') {
+        line-height: $line-height / 1366px * 500px;
+    }
+}
+@mixin font-size($size) {
+    @include mq('max') {
+        font-size: $size ;
+    }
+    font-size: $size / 1366px *  100vw;
+    @include mq('sp') {
+        font-size: $size / 1366px * 500px;
+    }
+}
+@mixin m-top($topsize) {
+    @include mq('max') {
+        margin-top: $topsize;
+    }
+    margin-top: $topsize / 1366px *  100vw;
+    @include mq('sp') {
+        margin-top: $topsize / 1366px * 500px;
+    }
+}
+@mixin m-bottom($bottomsize) {
+    @include mq('max') {
+        margin-bottom: $bottomsize;
+    }
+    margin-bottom: $bottomsize / 1366px *  100vw;
+    @include mq('sp') {
+        margin-bottom: $bottomsize / 1366px * 500px;
+    }
+}
+@mixin m-left($leftsize) {
+    @include mq('max') {
+        margin-left: $leftsize;
+    }
+    margin-left: $leftsize / 1366px *  100vw;
+    @include mq('sp') {
+        margin-left: $leftsize / 1366px * 500px;
+    }
+}
+@mixin m-right($rightsize) {
+    @include mq('max') {
+        margin-right: $rightsize;
+    }
+    margin-right: $rightsize / 1366px *  100vw;
+    @include mq('sp') {
+        margin-right: $rightsize / 1366px * 500px;
+    }
+}
+@mixin p-top($p-top) {
+    @include mq('max') {
+        padding-top: $p-top;
+    }
+    padding-top: $p-top / 1366px *  100vw;
+    @include mq('sp') {
+        padding-top: $p-top / 1366px * 500px;
+    }
+}
+@mixin p-left($p-left) {
+    @include mq('max') {
+        padding-left: $p-left;
+    }
+    padding-left: $p-left / 1366px *  100vw;
+    @include mq('sp') {
+        padding-left: $p-left / 1366px * 500px;
+    }
+}
+@mixin p-right($p-right) {
+    @include mq('max') {
+        padding-right: $p-right;
+    }
+    padding-right: $p-right / 1366px *  100vw;
+    @include mq('sp') {
+        padding-right: $p-right / 1366px * 500px;
+    }
+}
+@mixin p-bottom($p-bottom) {
+    @include mq('max') {
+        padding-bottom: $p-bottom;
+    }
+    padding-bottom: $p-bottom / 1366px *  100vw;
+    @include mq('sp') {
+        padding-bottom: $p-bottom / 1366px * 500px;
+    }
+}
+
+@mixin center-poji {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+@mixin center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,146 @@
+@import "_setting.scss";
+.swiper-button-prev,
+.swiper-button-next {
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+}
+
+.swiper-button-prev {
+    background: url(https://haniwaman.com/wp-content/uploads/2018/05/swiper3.png) no-repeat center center / contain;
+}
+.swiper-button-next {
+    background: url(https://haniwaman.com/wp-content/uploads/2018/05/swiper4.png) no-repeat center center / contain;
+}
+
+.swiper2 {
+    .swiper-container {
+        position: relative;
+        z-index: 0;
+        margin-bottom: 65px;
+        padding: 35px 0;
+        box-sizing: border-box;
+        border-bottom: solid 1px #B2D3A7;
+        .swiper-slide {
+            &-img {
+                width: 200px;
+                height: 120px;
+                margin: 0 24px;
+                &:hover {
+                    opacity: 0.6;
+                    transition: all 0.2s linear;
+                }
+            }
+                
+            &-p {
+                opacity: 0.6;
+            }
+        }
+    }
+} 
+
+
+.article {
+    width: 100%;
+    &__title {
+        display: flex;
+        margin: 30px 20px;
+        &-h3 {
+            color: $main-color;
+            font-weight: normal;
+            margin-right: auto;
+            .fa-copy {
+                margin-right: 10px;
+            }
+        }
+        &-p {
+            color: silver;
+            .fa-angle-right {
+                font-size: 20px;
+                vertical-align: middle;
+            }
+        }
+    }
+    &__tab {
+        background: rgba(255, 255, 255, 1);
+        width: 100%;
+        &-p {
+            color: silver;
+            text-align: right;
+            margin: {
+                right: 20px;
+                bottom: 10px;
+            }
+            .fa-angle-right {
+                font-size: 20px;
+                vertical-align: middle;
+            }
+        }
+        &--title {
+            width: 96%;
+            margin: 0 auto;
+            text-align: center;
+            @include m-bottom(60px);
+            font-size: 0;
+            &-li {
+                border-bottom: solid 1px $main-color;
+                height: 40px;
+                display: inline-block;
+                vertical-align:bottom;
+                width: 25%;
+                box-sizing: border-box;
+                border-bottom: none;
+                font-size: 1.4rem;
+                padding-top: 8px;
+                cursor: pointer;
+                color: $main-color;
+                background: #B2D3A7;
+            }
+            .active {
+                background: rgba(63, 81, 181, 1);
+                color: $main-color;
+                background: none;
+                border: {
+                    top: solid 2px $main-color;
+                    left: solid 1px $main-color;
+                    right: solid 1px $main-color;
+                }
+            }
+        }    
+        
+        &--about {
+            display: flex;
+            width: 96%;
+            margin: 0 auto 100px;
+            &-text {
+                display: none;   
+                &__content {
+                    &-li {
+                        border-bottom: dotted 1px #CCCCCC;;
+                        padding: 20px 0;
+                        font-size: 1.4rem;
+                        &:hover {
+                            background: #EFF4ED;
+                        }
+                        &-span1 {
+                            background: #EFF4ED;
+                            padding: 5px;
+                            margin-right: 5px;
+                        }
+                        &-span2 {
+                            font-size: 90%;
+                            background: #FCFF80;
+                            border: solid 1px #F4E02D;
+                            padding: 2px 5px;
+                            margin-left: 5px;
+                        }
+                    }
+                }         
+            }
+            .show {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,143 @@
+@import "_setting.scss";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    min-width: 400px;
+    font-size: 1.6rem;  
+    box-sizing: border-box;
+    transition: all .3s linear;
+    &.open {
+        transform: translateX(-260px);
+        transition: all .3s linear;
+    }
+    // em でコーディングする事で親要素の基準で相対出来る。
+    // ブラウザで設定している16px*0.625= 10% 10px=1remで楽に設定できる
+}
+.section,.article,.aside,.nav,.header,.main,.footer {
+	display: block;
+}
+h1,h2,h3,h4,h5,p,ul {
+    margin: 0;
+}
+ul {
+    padding: 0;
+    list-style: none;
+    // font-size:0;
+}
+// li {
+//     display: inline-block;
+//     font-size: 16px;
+// }
+a {
+    text-decoration: none;
+    color: inherit;
+    width: inherit;
+    height: inherit;
+}
+img {
+    width: inherit;
+    height: inherit;
+}
+.overlay {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .5s;
+    &.open {
+        width: 97.5vw;
+        height: 197vw;
+        opacity: 0.1;
+        transition: opacity .5s;
+    }
+}
+@import "_header.scss";
+@import "_main.scss";
+@import "_article.scss";
+
+.footer {
+    position: relative;
+    background: $main-color;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+    &__item1 {
+        border-bottom: 1px solid white;
+        padding-bottom: 20px;
+        &__logo {
+            width: 350px;
+            height: 80px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        &__info {
+            font-size: 1.4rem;
+            .fas {
+                margin-right: 5px;
+            }
+            &__item {
+                display: inline-block;
+                padding: 0 10px;
+                border-left: solid 1px #CCCCCC;
+                &:nth-child(1) {
+                    border-left: none;
+                }
+            }
+        }
+    }
+    &__info2 {
+        font-size: 1.4rem;
+        margin: 10px;
+        &__item {
+            display: inline-block;
+            margin-right: 20px;
+            &::before {
+                font-family: "Font Awesome 5 Free";
+                content: "\f0da";
+                font-weight: 900;
+            }
+        }
+    }
+    &__top {
+        position: absolute;
+        bottom: 3%;
+        right: 0;
+        width: 45px;
+        height: 40px;
+        &-p {
+            background: #b2d3a7;
+            color: $main-color;
+            font-size: 1.3rem;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            text-align: center;
+            line-height: 3.5;
+            height: 42px;       
+            a {
+                display: block;
+            }
+            &::before {
+                position: absolute;
+                font-family: "Font Awesome 5 Free";
+                content: "\f0de";
+                font-weight: 900;
+                font-size: 2em;
+                top: -25px;
+                right: 32%;
+                z-index: 0;
+            }
+        }
+    }
+}

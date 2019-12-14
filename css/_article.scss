@@ -1,0 +1,285 @@
+.article {
+    &__img1 {
+        text-align: center;
+        margin-bottom: 10px;
+        &:hover {
+            opacity: 0.6;
+            transition: all 0.2s linear;
+        }
+    }
+    &__img2 {
+        text-align: center;
+        margin-bottom: 10px;
+        &:hover {
+            opacity: 0.6;
+            transition: all 0.2s linear;
+        }
+    }
+    &__img3 {
+        text-align: center;
+        margin-bottom: 10px;
+        &:hover {
+            opacity: 0.6;
+            transition: all 0.2s linear;
+        }
+    }
+    &__img4 {
+        text-align: center;
+        margin-bottom: 10px;
+        &:hover {
+            opacity: 0.6;
+            transition: all 0.2s linear;
+        }
+    }
+    &__list {
+        border: solid 1px $main-color;
+        font-size: 1.4rem;
+        width: 90vw;
+        margin: 0 auto 15px;
+        &__item {
+            background: $main-color;
+            color: white;
+            padding: 10px 20px 7px 10px;
+            border-bottom: solid 0.1px white;
+            &:nth-child(6) {
+                border-bottom: none;
+            }
+            &:hover {
+                background: white;
+                color: $main-color;
+                transition: all 0.2s linear;
+            }
+        }
+    }
+    &__list-2 {
+        margin: 0 auto 10px;
+        width: 90vw;
+        font-size: 1.4rem;
+        color: #666666;
+        &__item {
+            position: relative;
+            border: solid 1px #CCD6C8;
+            background: #EFF4ED;
+            margin-bottom: 10px;
+            padding: 10px;
+            &:hover {
+                background: darken($color: #EFF4ED, $amount: 15%);
+            }
+            &:after {
+                @include after-Caret;
+            }
+        }
+    }
+    &__list-3 {
+        font-size: 1.4rem;
+        background: #EFF4ED;
+        border: solid 1px #CCD6C8;
+        padding: 10px;
+        box-sizing: border-box;
+        color: #666666;
+        width: 90vw;
+        margin: 0 auto 10px;
+        &__item {
+            padding: 10px;
+            border-bottom: dotted 1px #CCD6C8;
+            &:nth-child(3) {
+                border-bottom: none;
+            }
+            &:hover {
+                background: darken($color: #EFF4ED, $amount: 15%);
+            }
+        }
+    }
+    &__icon {
+        width: 85vw;
+        margin: 0 auto;
+        &--item {
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            padding: 5px;
+            &:hover {
+                background: rgb(216, 221, 213);
+                transition: all 0.2s linear;
+                opacity: 0.5;
+            }
+            &-p {
+                margin-right: 10px;
+                line-height: 1;
+                &-facebook {
+                    line-height: 1.3em;
+                    
+                }
+            }
+        }
+    }
+    &__info-group1 {
+        @include article-info-group;
+        @include article-info-group-ul;
+        &--ul--item {             
+            &:nth-child(3) {
+                border-bottom: none;
+            }
+        }
+    }
+    &__info-group2 {
+        @include article-info-group;
+        @include article-info-group-ul;
+        &--ul--item {   
+            &:nth-child(1) {
+                padding: 10px 0 20px 10px;
+                &::before {
+                    font-family: "Font Awesome 5 Free";
+                    content: "\f0c5";/*アイコンのユニコード*/
+                    position: absolute;/*絶対位置*/
+                    font-size: 1em;/*サイズ*/
+                    font-weight: 900;
+                    bottom: 5px;
+                    left: 15px;
+                    color: rgb(142, 209, 116);
+                }
+            }          
+            &:nth-child(2) {
+                border-bottom: none;
+            }
+        }
+    }
+    &__video {
+        @include article-info-group;
+        padding: 10px;
+        &--p {
+            color: #333333;
+            padding: 0 15px;
+            margin-bottom: 10px;
+        }
+        &--iframe-wrap {
+            position: relative;
+            width: 100%;
+            padding-top: 58.33333%;
+            box-sizing: border-box;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__video2 {
+        @include article-info-group;
+        padding: 10px;
+        &--p {
+            color: #333333;
+            padding: 0 15px;
+            margin-bottom: 10px;
+        }
+        &--iframe-wrap {
+            position: relative;
+            width: 100%;
+            padding-top: 58.33333%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &--p2 {
+            color: #0000EE;
+            text-decoration: underline;
+            margin-bottom: 20px;
+            &:hover {
+                color: #ea6000;
+                transition: all 0.2s linear;
+            }
+        }
+    }
+    &__info-group3 {
+        @include article-info-group;
+        @include article-info-group-ul;
+        &--ul--item {             
+            &:nth-child(2) {
+                border-bottom: none;
+            }
+        }
+    }
+    &__info-group4 {
+        @include article-info-group;
+        @include article-info-group-ul;
+        padding: 10px;
+        &--ul--item {             
+            &:nth-child(6) {
+                border-bottom: none;
+            }
+        }
+    }
+    &__info-group5 {
+        @include article-info-group;
+        @include article-info-group-ul;
+        padding-bottom: 5px;
+        margin-bottom: 30px;
+        &--h4 {
+            margin-bottom: 10px;
+        }
+        &--p {
+            text-align: center;
+        }
+    }
+    &__bunner {
+        background-image: url(https://www.hiroshima-u.ac.jp/sites/all/themes/hu/images/common/bunerArea_bg.gif);
+        &-ul {
+            padding: 20px 15px;
+            &-li {
+                display: inline-block;
+                width: 49%;
+                text-align: center;
+                margin-bottom: 10px;
+                img {
+                    &:hover {
+                        opacity: 0.5;
+                        transition: all 0.2s linear;
+                        border: solid 2px $main-color;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+    &__list-4 {
+        background: $main-color;
+        padding-top: 30px;
+        &--ul {
+           @include article-info-group-ul2;
+        }
+        &--ul2 {
+            @include article-info-group-ul2;
+            background: $main-color;
+            &--item {
+                color: white;
+                border-bottom: dotted 1px #CCCCCC;
+                &:after {
+                    color: white;
+                }
+                &:hover {
+                    background: $main-color;
+                }
+            }
+        }
+        &--ul3 {
+            @include article-info-group-ul2;
+            background: #EFF4ED;
+            &--item {
+                color: #666666;
+                &:hover {
+                    background: #EFF4ED;
+                }
+            }
+        }
+    }
+
+}

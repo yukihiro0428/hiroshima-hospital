@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>広島大学病院</title>
+    <link rel="stylesheet" href="css/stylesheet.css?ver=1.0.1">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/swiper.css">
+</head>
+<body>
+<div class="overlay"></div><!-- ドロワー時のbackground -->
+<header class="header">
+    <ul class="header__tab">
+        <li class="header__tab--item-Common header__tab-list1 js-modal-open" data-target="modal01">Language</li>
+        <li class="header__tab--item-Common header__tab-list2 js-modal-open" data-target="modal01">日本語</li>
+    </ul>
+    <div id="modal01" class="header__modal modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <ul class="header__modal--list modal__content">
+            <li class="header__modal--list-item header__modal--list-first"><a href="">日本語</a></li>
+            <li class="header__modal--list-item"><a href="">English</a></li>
+            <li class="header__modal--list-item"><a href="">中文</a></li>
+            <li class="header__modal--list-item"><a href="">اللغة العربية</a></li>
+            <li class="header__modal--list-item"><a href="">español</a></li>
+            <p class="header__modal--list-close js-modal-close"><a href="">閉じる</a></p>
+        </ul>
+        <a class="js-modal-close" href="">閉じる</a>
+    </div><!--modal-->
+    <div id="modal02" class="header__main modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <form class="header__main--form" action="自分のサイトのURL">
+            <input class="header__main--form-input-text" name="" type="text" placeholder="カスタム検索">
+            <input class="header__main--form-input-submit fas" type="submit" value="&#xf002;">
+            <p class="header__main--form-p js-modal-close"><a href="">閉じる</a></p>
+        </form>
+        <a class="js-modal-close" href="">閉じる</a>
+    </div><!--modal-->
+    <div class="header__main">
+        <p class="header__main-title"><a href=""><img src="img/h1_title-min.png" alt="タイトル"></a></p>
+        <p class="header__main-search-box js-modal-open" data-target="modal02"><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></p>   
+        <p class="header__main-menu-trigger">MENU</p>
+        <nav class="header__main--nav">
+            <div class="header__main--nav-about">
+                <div class="header__main--nav-about-title">
+                    <div class="header__main--nav-about-title-h4"><a href="">ホームに戻る</a></div>
+                    <div class="header__main--nav-about-title-p">閉じる</div>
+                </div>
+                <ul class="header__main--nav-about-ul1">
+                    <li class="header__main--nav-about-ul1-li"><p><a href="">高校生・受講生の方</a></p></li>
+                    <li class="header__main--nav-about-ul1-li"><p><a href="">広大へ留学希望の方</a></p></li>
+                    <li class="header__main--nav-about-ul1-li"><p><a href="">一般・地域の方</a></p></li>
+                    <li class="header__main--nav-about-ul1-li"><p><a href="">企業・研究者の方</a></p></li>
+                    <li class="header__main--nav-about-ul1-li"><p><a href="">卒業生の方</a></p></li>
+                    <li class="header__main--nav-about-ul1-li"><p><a href="">在学生・保護者の方</a></p></li>
+                </ul>
+                <ul class="header__main--nav-about-ul2">
+                    <li class="header__main--nav-about-ul2-li"><p><a href="">大学案内</a></p></li>
+                    <li class="header__main--nav-about-ul2-li"><p><a href="">入試情報</a></p></li>
+                    <li class="header__main--nav-about-ul2-li"><p><a href="">教育・学生生活・就職</a></p></li>
+                    <li class="header__main--nav-about-ul2-li"><p><a href="">研究</a></p></li>
+                    <li class="header__main--nav-about-ul2-li"><p><a href="">社会・産学連携</a></p></li>
+                    <li class="header__main--nav-about-ul2-li"><p><a href="">留学・国際交流</a></p></li>
+                    <li class="header__main--nav-about-ul2-li"><p><a href="">学部・大学院等</a></p></li>
+                    <li class="header__main--nav-about-ul2-li"><p><a href="">研究所・施設等</a></p></li>
+                </ul>
+                <ul class="header__main--nav-about-ul3">
+                    <li class="header__main--nav-about-ul3-li"><p><a href="">広報・報道</a></p></li>
+                    <li class="header__main--nav-about-ul3-li"><p><a href="">採用情報</a></p></li>
+                    <li class="header__main--nav-about-ul3-li"><p><a href="">校友会・同窓会</a></p></li>
+                    <li class="header__main--nav-about-ul3-li"><p><a href="">広島大学基金</a></p></li>
+                    <li class="header__main--nav-about-ul3-li"><p><a href="">教育研究支援団体</a></p></li>
+                    <li class="header__main--nav-about-ul3-li"><p><a href="">図書館・博物館</a></p></li>
+                    <li class="header__main--nav-about-ul3-li"><p><a href="">大学病院</a></p></li>
+                    <li class="header__main--nav-about-ul3-li"><p><a href="">付属学校</a></p></li>
+                </ul>
+                <p class="header__main--nav-about-close"><a href="">閉じる</a></p>
+            </div>
+        </nav>        
+        <ul class="header__main__info">
+            <li class="header__main__info-li"><a href=""><i class="fas fa-sitemap"></i>サイトマップ</a></li>
+            <li class="header__main__info-li"><a href=""><i class="fas fa-map-marker-alt"></i>交通アクセス</a></li>
+            <li class="header__main__info-li"><a href=""><i class="fas fa-question"></i>お問い合わせ</a></li>
+        </ul>
+    </div>
+    
+</header>
+<main>
+    <div class="swiper1">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/ホームカミングデー&大学祭 (1).jpg" alt="Swiper01"></div>
+                <div class="swiper-slide"><img src="img/20190826_newgraduateschoolfrom202004 (1).jpg" alt="Swiper02"></div>
+                <div class="swiper-slide"><img src="img/zenmenkinen-jp_20190129-2 (1).jpg" alt="Swiper03"></div>
+                <div class="swiper-slide"><img src="img/takuetsudaigakuin (1).jpg" alt="Swiper04"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="swiper2">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="swiper-slide-img" src="img/jp_お知らせ.jpg" alt="Swiper01">
+                    <p class="swiper-slide-p">「広島大学循環バス」運行開始</p>
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-slide-img" src="img/tamachi_genome_20191023.jpg" alt="Swiper02">
+                    <p class="swiper-slide-p">広島大学タマチラボ開催</p>
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-slide-img" src="img/research.jpg" alt="Swiper03">
+                    <p class="swiper-slide-p">細胞核構造再編の謎を解明！</p>
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-slide-img" src="img/brand-image-ranking.jpg" alt="Swiper04">
+                    <p class="swiper-slide-p">「対人力」で全国1位の評価</p>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</main>
+
+<section class="article">
+    <div class="article__title">
+        <h3 class="article__title-h3"><i class="fa fa-copy" aria-hidden="true"></i>ニュース＆トピック</h3>
+        <p class="article__title-p"><a href="">一覧     <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+    </div>
+    <div class="article__tab">
+            <ul class="article__tab--title">
+                <li class="article__tab--title-li active">お知らせ</li>
+                <li class="article__tab--title-li">入試</li>
+                <li class="article__tab--title-li">研究結果</li>
+                <li class="article__tab--title-li">イベント</li>
+            </ul>
+            <p class="article__tab-p"><a href="">一覧     <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+            <div class="article__tab--about">
+                <div class="article__tab--about-text show">
+                    <ul class="article__tab--about-text__content">
+                        <li class="article__tab--about-text__content-li"><a href=""><span class="article__tab--about-text__content-li-span1">2019/10/21</span>中国 貴州で第4回日本語作文スピーチコンテストを開催しました</a><span class="article__tab--about-text__content-li-span2">new!</span></li>
+                        <li class="article__tab--about-text__content-li"><a href=""><span class="article__tab--about-text__content-li-span1">2019/10/21</span>「ゲノム編集の最多論文発表者15人」：山本卓教授が2位、佐久間哲史講師が5位の評価を受けました</a><span class="article__tab--about-text__content-li-span2">new!</span></li>
+                        <li class="article__tab--about-text__content-li"><a href=""><span class="article__tab--about-text__content-li-span1">2019/10/21</span>インドネシア・ハサヌディン大学 イドゥルス前学長ほかと越智学長が会談しました</a><span class="article__tab--about-text__content-li-span2">new!</span></li>
+                        <li class="article__tab--about-text__content-li"><a href=""><span class="article__tab--about-text__content-li-span1">2019/10/21</span>外国語教育研究センター発の英語学習ポッドキャストの配信本数が1,000本目となりました</a><span class="article__tab--about-text__content-li-span2">new!</span></li>
+                        <li class="article__tab--about-text__content-li"><a href=""><span class="article__tab--about-text__content-li-span1">2019/10/21</span>体育会アメフト部ラクーンズが中四国リーグ決勝戦に進出!応援バスツアー参加者を募集します</a><span class="article__tab--about-text__content-li-span2">new!</span></li>
+                    </ul>
+                </div>
+                <div class="article__tab--about-text">
+                    <h5 class="article__tab--about-text-h5">タブ2の見出し</h5>
+                    <p class="article__tab--about-text-p">タブ2のコンテンツ。タブ2のコンテンツ。タブ2のコンテンツ。タブ2のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１の</p>
+                    <a class="article__tab--about-text-a" href="">詳しく見る<i class="far fa-angle-right fa-lg"></i></a>
+                </div>
+                <div class="article__tab--about-text">
+                    <h5 class="article__tab--about-text-h5">タブ3の見出し</h5>
+                    <p class="article__tab--about-text-p">タブ3のコンテンツ。タブ3のコンテンツ。タブ3のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１の</p>
+                    <a class="article__tab--about-text-a" href="">詳しく見る<i class="far fa-angle-right fa-lg"></i></a>
+                </div>
+                <div class="article__tab--about-text">
+                    <h5 class="article__tab--about-text-h5">タブ4の見出し</h5>
+                    <p class="article__tab--about-text-p">タブ4のコンテンツ。タブ4のコンテンツ。タブ4のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１の</p>
+                    <a class="article__tab--about-text-a" href="">詳しく見る<i class="far fa-angle-right fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+</section>
+
+<div class="article">
+    <p class="article__img1"><a href=""><img src="img/splendor2 (1).jpg" alt=""></a></p>
+    <p class="article__img2"><a href=""><img src="img/gakutyo (1).jpg" alt=""></a></p>
+    <p class="article__img3"><a href=""><img src="img/teirei (1).jpg" alt=""></a></p>
+    <p class="article__img4"><a href=""><img src="img/kifu (1).jpg" alt=""></a></p>
+    <ul class="article__list">
+        <li class="article__list__item"><a href="">広報・報道</a></li>
+        <li class="article__list__item"><a href="">採用情報</a></li>
+        <li class="article__list__item"><a href="">校友会・同窓会</a></li>
+        <li class="article__list__item"><a href="">広島大学が躍動し広島の地を活性化させる基金</a></li>
+        <li class="article__list__item"><a href="">図書館・博物館</a></li>
+        <li class="article__list__item"><a href="">東京オフィス</a></li>
+    </ul>
+    <ul class="article__list-2">
+        <li class="article__list-2__item"><a href="">大学病院</a></li>
+        <li class="article__list-2__item"><a href="">付属学校</a></li>
+        <li class="article__list-2__item"><a href="">学外の方が利用できる施設</a></li>
+        <li class="article__list-2__item"><a href="">公式アカウント一覧</a></li>
+    </ul>
+    <ul class="article__list-3">
+        <li class="article__list-3__item"><a href="">ストリートビュー</a></li>
+        <li class="article__list-3__item"><a href="">キャンパスカメラ</a></li>
+        <li class="article__list-3__item"><a href="">学内ポータル</a></li>
+    </ul>
+    <div class="article__icon">
+        <div class="article__icon--item">
+            <p class="article__icon--item-p"><img src="img/289-min.png" alt=""></p>
+            <p>Twitter</p>
+        </div>
+        <div class="article__icon--item">
+            <p class="article__icon--item-p"><img src="img/291 (1)-min.png" alt=""></p>
+            <p class="article__icon--item-p-facebook">Facebook<br>日本語版</p>
+        </div>
+        <div class="article__icon--item">
+            <p class="article__icon--item-p"><img src="img/291 (1)-min.png" alt=""></p>
+            <p class="article__icon--item-p-facebook">Facebook<br>英語版</p>
+        </div>
+        <div class="article__icon--item">
+            <p class="article__icon--item-p"><img src="img/instagram (1).jpg" alt=""></p>
+            <p>Instagram</p>
+        </div>
+        <div class="article__icon--item">
+            <p class="article__icon--item-p"><img src="img/292-min.png" alt=""></p>
+            <p>YouTube</p>
+        </div>
+    </div>
+    <div class="article__info-group1">
+        <h4 class="article__info-group1--h4">入試について</h4>
+        <ul class="article__info-group1--ul">
+            <li class="article__info-group1--ul--item"><a href="">入試説明会(受験生向け)</a></li>
+            <li class="article__info-group1--ul--item"><a href="">入試説明会(高校教員向け)</a></li>
+            <li class="article__info-group1--ul--item"><a href="">資料請求</a></li>
+        </ul>
+    </div>
+    <div class="article__info-group2">
+        <h4 class="article__info-group2--h4">高校生・保護者</h4>
+        <ul class="article__info-group2--ul">
+            <li class="article__info-group2--ul--item"><a href="">キャンパスライフ情報(学生情報の森もみじ)</a></li>
+            <li class="article__info-group2--ul--item"><a href="">入試説明会(高校教員向け)</a></li>
+        </ul>
+    </div>
+    <div class="article__video">
+        <h4 class="article__video--h4">広島大学プロモーションビデオ</h4>
+        <p class="article__video--p">魅力あふれる広島大学をぜひご覧ください。</p>
+        <div class="article__video--iframe-wrap">
+            <iframe width="600" height="350" src="https://www.youtube.com/embed/Vye5v4Y4UGo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="article__video2">
+        <h4 class="article__video2--h4">卒業生ビデオレター</h4>
+        <p class="article__video2--p">広島大学で学び、現在海外で活躍している卒業生からのビデオレターです。</p>
+        <div class="article__video2--iframe-wrap">
+            <iframe width="600" height="350" src="https://www.youtube.com/embed/l5P6D57L5Ko" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="article__video2--p2"><a href="">動画一覧へ</a></p>
+    </div>
+    <div class="article__info-group3">
+        <h4 class="article__info-group3--h4">広大生＆研究者インタビュー</h4>
+        <ul class="article__info-group3--ul">
+            <li class="article__info-group3--ul--item"><a href="">広大生の生の声</a></li>
+            <li class="article__info-group3--ul--item"><a href="">研究者インタビュー</a></li>
+        </ul>
+    </div>
+    <div class="article__info-group4">
+        <ul class="article__info-group4-ul">
+            <li class="article__info-group4--ul--item"><a href="">平成30年7月豪雨災害に対する本学の取り組み</a></li>
+            <li class="article__info-group4--ul--item"><a href="">熊本地震における本学の対応</a></li>
+            <li class="article__info-group4--ul--item"><a href="">広島市北部大規模土砂災害対応</a></li>
+            <li class="article__info-group4--ul--item"><a href="">東日本大震災に関する取り組み</a></li>
+            <li class="article__info-group4--ul--item"><a href="">若手研究人材の養成</a></li>
+            <li class="article__info-group4--ul--item"><a href="">男女共同参画の推進</a></li>
+        </ul>
+    </div>
+    <div class="article__info-group5">
+        <h4 class="article__info-group5--h4">国立大学長と有識者等の対談</h4>
+        <p class="article__info-group5--p"><img src="img/banner_januconv-min.png" alt=""></p>
+    </div>
+    <div class="article__bunner">
+        <ul class="article__bunner-ul">
+            <li class="article__bunner-ul-li"><a href=""><img src="img/bunner_j_sguJA_obinasi-min.png" alt=""></a></li>
+            <li class="article__bunner-ul-li"><a href=""><img src="img/bunner_j_ruJA_obinasi-min.png" alt=""></a></li>
+            <li class="article__bunner-ul-li"><a href=""><img src="img/bunner_j_lpJA_obinasi-min.png" alt=""></a></li>
+            <li class="article__bunner-ul-li"><a href=""><img src="img/bunner_j_COI-min.png" alt=""></a></li>
+            <li class="article__bunner-ul-li"><a href=""><img src="img/bunner_j_hiraku-min.png" alt=""></a></li>
+            <li class="article__bunner-ul-li"><a href=""><img src="img/bunner_j_sguJA_obinasi-min.png" alt=""></a></li>
+            <li class="article__bunner-ul-li"><a href=""><img src="img/opera_b (1).jpg" alt=""></a></li>
+            <li class="article__bunner-ul-li"><a href=""><img src="img/CAPWR_banner_20190403-min.png" alt=""></a></li>
+            <li class="article__bunner-ul-li"><a href=""><img src="img/bunner_j_project2-min.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="article__list-4">
+        <ul class="article__list-4--ul">
+            <li class="article__list-4--ul--item"><a href="">受験生の方</a></li>
+            <li class="article__list-4--ul--item"><a href="">広大へ留学希望の方</a></li>
+            <li class="article__list-4--ul--item"><a href="">一般・地域の方</a></li>
+            <li class="article__list-4--ul--item"><a href="">企業・研究者の方</a></li>
+            <li class="article__list-4--ul--item"><a href="">卒業生の方</a></li>
+            <li class="article__list-4--ul--item"><a href="">在学生・保護者の方</a></li>
+        </ul>
+        <ul class="article__list-4--ul2">
+            <li class="article__list-4--ul2--item"><a href="">大学案内</a></li>
+            <li class="article__list-4--ul2--item"><a href="">入試情報</a></li>
+            <li class="article__list-4--ul2--item"><a href="">教育・学生生活</a></li>
+            <li class="article__list-4--ul2--item"><a href="">研究</a></li>
+            <li class="article__list-4--ul2--item"><a href="">社会・産業連携</a></li>
+            <li class="article__list-4--ul2--item"><a href="">留学・国際交流</a></li>
+            <li class="article__list-4--ul2--item"><a href="">学部・大学院等</a></li>
+            <li class="article__list-4--ul2--item"><a href="">研究所・施設等</a></li>
+        </ul>
+        <ul class="article__list-4--ul3">
+            <li class="article__list-4--ul3--item"><a href="">広報・報道</a></li>
+            <li class="article__list-4--ul3--item"><a href="">採用情報</a></li>
+            <li class="article__list-4--ul3--item"><a href="">校友会・同窓会</a></li>
+            <li class="article__list-4--ul3--item"><a href="">広島大学基金</a></li>
+            <li class="article__list-4--ul3--item"><a href="">教育研究支援財団</a></li>
+            <li class="article__list-4--ul3--item"><a href="">図書館・博物館等</a></li>
+            <li class="article__list-4--ul3--item"><a href="">大学病院</a></li>
+            <li class="article__list-4--ul3--item"><a href="">付属学校</a></li>
+        </ul>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer__item1">
+        <p class="footer__item1__logo"><a href=""><img src="https://www.hiroshima-u.ac.jp/sites/all/themes/hu/images/common/footer_logo.png" alt=""></a></p>
+        <ul class="footer__item1__info">
+            <li class="footer__item1__info__item"><a href=""><i class="fas fa-sitemap"></i>サイトマップ</a></li>
+            <li class="footer__item1__info__item"><a href=""><i class="fas fa-map-marker-alt"></i>交通アクセス</a></li>
+            <li class="footer__item1__info__item"><a href=""><i class="fas fa-envelope" aria-hidden="true"></i>お問い合わせ</a></li>
+        </ul>
+    </div>
+    <ul class="footer__info2">
+        <li class="footer__info2__item"><a href="">サイトポリシー</a></li>
+        <li class="footer__info2__item"><a href="">プライバシーポリシー</a></li>
+    </ul>
+    <small class="footer__small">Copyright © 2003- 広島大学</small>
+    <div class="footer__top">
+        <p class="footer__top-p"><a href="">up</a></p>
+    </div>
+</footer>
+
+<script src="dist/js/swiper.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="script.js"></script>    
+</body>
+</html>
